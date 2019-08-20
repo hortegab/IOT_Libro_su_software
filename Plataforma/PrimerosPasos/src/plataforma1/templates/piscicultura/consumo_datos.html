@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}     <!-- carga archivos estaticos -->
+
+    <!-- es para cargar jquery, un framework de javascript -->
+    <script src = "{% static 'piscicultura/js/jquery-3.4.1.min.js' %}"> </script>
+    <!-- es para cargar la libreria de graficas  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <title>Graficas</title>
+</head>
+<body>
+        <h1> Grafica de los sensores en modo nariz del kit</h1>
+        
+        <!-- este canvas permite enlazar ek HTML con la grafica, 
+        es decir, la grafica se colocara en este espacio -->
+         <canvas id="myChart"  style="border:1px solid"></canvas> 
+
+         <!-- llama al script realizado para la grafica -->
+        <script src= "{% static 'piscicultura/js/graficas.js' %}" ></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'app_prueba/base1.html' %}
+
+{% block body_block %}
+
+<div class="container">
+<div class="jumbotron">
+<h1> Colección de Imágenes almacenadas en la base de datos </h1>
+</div>
+{% for data in imagenes %}
+<img src="{{ data.imagen.url }}" alt="no encontrado" class="img-thumbnail" height="200px" width="300px">
+{% endfor %}
+</div>
+{% endblock  %}
+

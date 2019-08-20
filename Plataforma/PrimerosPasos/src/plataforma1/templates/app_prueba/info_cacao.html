@@ -1,0 +1,39 @@
+{% extends 'app_prueba/base1.html' %}
+
+{% block body_block %}
+
+ <div class="container">
+ <div class="jumbotron">
+<h1> Datos plataforma </h1>
+<h3> Area total sembrada en {{departamento}} {{area_total}} ha
+<h3> Produccion total en {{departamento}} {{total_produccion}} ton
+ </div>
+
+ <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Area sembrada ha</th>
+      <th scope="col">Area cosechada ha</th>
+      <th scope="col">Produccion ton</th>
+      <th scope="col">Rendimiento ton/ha</th>
+      <th scope="col">Municipio</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for dato in cacao %}
+        <tr>
+      <th scope="row">{{dato.area_sembrada}}</th>
+      <td>{{dato.area_cosechada}} </td>
+      <td>{{dato.produccion}} </td>
+      <td>{{dato.rendimiento}} </td>
+            <td>{{dato.municipio}} </td>
+
+        </tr>
+  {% endfor %}
+
+    
+  </tbody>
+</table>
+ </div>
+{% endblock  %}

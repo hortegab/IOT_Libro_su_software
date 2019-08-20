@@ -1,0 +1,16 @@
+{% extends 'app_prueba/base1.html' %}
+
+{% block body_block %}
+
+<div class="container">
+<h1> Bienvenidos a la capacitacion plataforma </h1>
+<h2> Actividades </h2>
+ <ol>
+  <li><a href="{% url 'app_prueba:info-cacao' %}">Actividad 3 </a></li>
+  <li><a href="{% url 'app_prueba:info-cacao2' %}">Actividad 4 </a></li>
+  <li><a href="{% url 'app_prueba:info-cacao' %}">Actividad 5 </a></li>
+</ol> 
+
+</div>
+
+{% endblock  %}

@@ -1,0 +1,20 @@
+{% extends 'app_prueba/base1.html' %}
+
+{% block body_block %}
+<div class="container">
+
+<h1>Video subido</h1>
+<form enctype="multipart/form-data" action="{% url 'app_prueba:mostrar-video' %}" method="post" accept="video/mp4"
+target="_blank">
+{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Subir video">
+</form>
+
+<video width="500" controls>
+<source src="{{ videofile.url }}" type="video/mp4" > </source>
+Su navegador no soporta este video
+</video>
+</div>
+
+{% endblock  %}
